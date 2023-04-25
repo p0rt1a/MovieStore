@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi.csproj", "{178B4D2E-9140-4055-8079-032683F87E11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi.csproj", "{178B4D2E-9140-4055-8079-032683F87E11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{082BD13F-AFFD-47DD-869C-1EADFF4EFE25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApp.UnitTests", "..\MovieApp.UnitTests\MovieApp.UnitTests.csproj", "{27A2E765-D75E-4D93-B063-FF2A3BCA2B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{178B4D2E-9140-4055-8079-032683F87E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{178B4D2E-9140-4055-8079-032683F87E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{178B4D2E-9140-4055-8079-032683F87E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27A2E765-D75E-4D93-B063-FF2A3BCA2B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27A2E765-D75E-4D93-B063-FF2A3BCA2B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27A2E765-D75E-4D93-B063-FF2A3BCA2B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27A2E765-D75E-4D93-B063-FF2A3BCA2B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27A2E765-D75E-4D93-B063-FF2A3BCA2B16} = {082BD13F-AFFD-47DD-869C-1EADFF4EFE25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8FEEE48-E5B2-48DE-857F-6124AA7FC8F4}

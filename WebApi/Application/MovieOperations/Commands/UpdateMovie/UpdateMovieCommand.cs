@@ -26,9 +26,6 @@ namespace WebApi.Application.MovieOperations.Commands.UpdateMovie
             if (movie is null)
                 throw new InvalidOperationException("Film bulunamadı");
 
-            if (_dbContext.Movies.Any(x => x.Title.ToLower() == Model.Title.ToLower() && x.Id != MovieId))
-                throw new InvalidOperationException("Film zaten mevcut");
-
             movie.Title = string.IsNullOrEmpty(Model.Title.Trim()) ? movie.Title : Model.Title;
             movie.Price = Model.Price > 0 ? Model.Price : movie.Price;
 

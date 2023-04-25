@@ -14,12 +14,6 @@ namespace WebApi.DbOperations
 
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<MovieActors>()
-                .HasKey(x => new { x.MovieId, x.ActorId });
-        }
-
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Director> Directors { get; set; }

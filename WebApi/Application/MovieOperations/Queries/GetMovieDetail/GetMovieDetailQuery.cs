@@ -32,7 +32,7 @@ namespace WebApi.Application.MovieOperations.Queries.GetMovieDetail
                 .SingleOrDefault(x => x.Id == MovieId);
 
             if (movie is null)
-                throw new InvalidOperationException("Film bulunamadı.");
+                throw new InvalidOperationException("Film bulunamadı");
 
             MovieDetailViewModel vm = _mapper.Map<MovieDetailViewModel>(movie);
 

@@ -37,8 +37,9 @@ C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\staticweba
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\WebApi.RazorTargetAssemblyInfo.cache
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\WebApi.csproj.CopyComplete
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\WebApi.dll
-C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\refint\WebApi.dll
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\ref\WebApi.dll
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.xml
+C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\bin\Debug\net5.0\ref\WebApi.dll

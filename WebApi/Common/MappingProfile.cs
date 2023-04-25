@@ -23,7 +23,7 @@ namespace WebApi.Common
                 .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name))
                 .ForMember(dest => dest.Director, opt => opt.MapFrom(src => $"{src.Director.Name} {src.Director.Surname}"))
                 .ForMember(dest => dest.Year, opt => opt.MapFrom(src => src.Year.ToString("dd/MM/yyyy")));
-            
+
             CreateMap<Movie, MovieDetailViewModel>()
                 .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name))
                 .ForMember(dest => dest.Director, opt => opt.MapFrom(src => $"{src.Director.Name} {src.Director.Surname}"))

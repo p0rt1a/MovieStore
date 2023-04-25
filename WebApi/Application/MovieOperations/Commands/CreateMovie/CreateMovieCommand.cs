@@ -26,7 +26,7 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
             var movie = _dbContext.Movies.SingleOrDefault(x => x.Title == Model.Title);
 
             if (movie is not null)
-                throw new InvalidOperationException("Film zaten mevcut.");
+                throw new InvalidOperationException("Film zaten mevcut");
 
             var createdMovie = _mapper.Map<Movie>(Model);
 
