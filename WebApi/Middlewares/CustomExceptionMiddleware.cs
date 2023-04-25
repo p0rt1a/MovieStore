@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -24,28 +25,32 @@ namespace WebApi.Middlewares
 
         public async Task Invoke(HttpContext context)
         {
+            Stopwatch watch = new Stopwatch();
+
             try
             {
+                watch.Start();
                 string message = $"[Request] HTTP {context.Request.Method} - {context.Request.Path}";
                 _logger.Write(message);
 
                 await _next(context);
-
-                message = $"[Response] HTTP {context.Request.Method} - {context.Request.Path} responded {context.Response.StatusCode}";
+                watch.Stop();
+                message = $"[Response] HTTP {context.Request.Method} - {context.Request.Path} responded {context.Response.StatusCode} in {watch.ElapsedMilliseconds}ms";
                 _logger.Write(message);
             }
             catch (Exception e)
             {
-                await HandleException(context, e);
+                watch.Stop();
+                await HandleException(context, e, watch);
             }
         }
 
-        private Task HandleException(HttpContext context, Exception e)
+        private Task HandleException(HttpContext context, Exception e, Stopwatch watch)
         {
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-            string message = $"[Error] HTTP {context.Request.Method} - {context.Response.StatusCode}. Error Message: {e.Message}";
+            string message = $"[Error] HTTP {context.Request.Method} - {context.Response.StatusCode}. Error Message: {e.Message} in {watch.ElapsedMilliseconds}ms";
             _logger.Write(message);
 
             var result = JsonConvert.SerializeObject(new { error = e.Message }, Formatting.None);
