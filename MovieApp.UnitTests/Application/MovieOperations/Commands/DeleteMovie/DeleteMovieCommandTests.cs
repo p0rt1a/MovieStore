@@ -37,7 +37,7 @@ namespace MovieApp.UnitTests.Application.MovieOperations.Commands.DeleteMovie
         }
 
         [Fact]
-        public void WhenAlreadyExistMovieIdIsGiven_Movie_ShouldBeDeleted()
+        public void WhenValidMovieIdIsGiven_Movie_ShouldBeDeleted()
         {
             var movie = new Movie()
             {

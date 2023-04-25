@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApi.Application.GenreOperations.Commands.CreateGenre;
+using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
+using WebApi.Application.GenreOperations.Queries.GetGenres;
 using WebApi.Application.MovieOperations.Commands.CreateMovie;
 using WebApi.Application.MovieOperations.Commands.UpdateMovie;
 using WebApi.Application.MovieOperations.Queries.GetMovieDetail;
@@ -31,7 +34,12 @@ namespace WebApi.Common
                 .ForMember(dest => dest.Actors, opt => opt.MapFrom(src => src.MovieActors.Select(x => $"{x.Actor.Name} {x.Actor.Surname}")));
 
             CreateMap<CreateMovieModel, Movie>();
-            CreateMap<UpdateMovieModel, Movie>();
+            #endregion
+
+            #region Genre Mappings
+            CreateMap<Genre, GenreViewModel>();
+            CreateMap<Genre, GenreDetailViewModel>();
+            CreateMap<CreateGenreModel, Genre>();
             #endregion
         }
     }

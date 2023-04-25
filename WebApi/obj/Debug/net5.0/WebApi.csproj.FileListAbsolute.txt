@@ -41,5 +41,5 @@ C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\ref\WebApi.dll
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\bin\Debug\net5.0\FluentValidation.dll
-C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.xml
 C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\bin\Debug\net5.0\ref\WebApi.dll
+C:\Users\alper\Desktop\My Websites\MovieStore\WebApi\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.xml
