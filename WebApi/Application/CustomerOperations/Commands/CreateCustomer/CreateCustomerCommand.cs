@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WebApi.DbOperations;
 using WebApi.Entities;
 
-namespace WebApi.Application.CustomerOperations.CreateCustomer
+namespace WebApi.Application.CustomerOperations.Commands.CreateCustomer
 {
     public class CreateCustomerCommand
     {

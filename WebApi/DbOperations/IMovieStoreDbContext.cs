@@ -15,6 +15,7 @@ namespace WebApi.DbOperations
         DbSet<Genre> Genres { get; set; }
         DbSet<MovieActors> MovieActors { get; set; }
         DbSet<Customer> Customers { get; set; }
+        DbSet<Order> Orders { get; set; }
 
         int SaveChanges();
     }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using AutoMapper;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,23 +8,25 @@ using WebApi.DbOperations;
 using WebApi.TokenOperations;
 using WebApi.TokenOperations.Models;
 
-namespace WebApi.Application.CustomerOperations.RefreshToken
+namespace WebApi.Application.CustomerOperations.Commands.CreateToken
 {
-    public class RefreshTokenCommand
+    public class CreateTokenCommand
     {
         private readonly IMovieStoreDbContext _dbContext;
+        private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
-        public string RefreshToken { get; set; }
+        public CreateTokenModel Model { get; set; }
 
-        public RefreshTokenCommand(IMovieStoreDbContext dbContext, IConfiguration configuration)
+        public CreateTokenCommand(IMovieStoreDbContext dbContext, IMapper mapper, IConfiguration configuration)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
             _configuration = configuration;
         }
 
         public Token Handle()
         {
-            var customer = _dbContext.Customers.SingleOrDefault(x => x.RefreshToken == RefreshToken && x.RefreshTokenExpireDate > DateTime.Now);
+            var customer = _dbContext.Customers.SingleOrDefault(x => x.Email == Model.Email && x.Password == Model.Password);
 
             if (customer is not null)
             {
@@ -38,9 +41,13 @@ namespace WebApi.Application.CustomerOperations.RefreshToken
                 return token;
             }
             else
-                throw new InvalidOperationException("Geçerli bir token bilgisi bulunamadı");
+                throw new InvalidOperationException("Email ya da şifre hatalı");
         }
     }
 
-    
+    public class CreateTokenModel
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
 }

@@ -1,13 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebApi.Application.CustomerOperations.CreateCustomer;
-using WebApi.Application.CustomerOperations.CreateToken;
-using WebApi.Application.CustomerOperations.RefreshToken;
+using WebApi.Application.CustomerOperations.Commands.CreateCustomer;
+using WebApi.Application.CustomerOperations.Commands.CreateToken;
+using WebApi.Application.CustomerOperations.Commands.RefreshToken;
 using WebApi.DbOperations;
 
 namespace WebApi.Controllers
