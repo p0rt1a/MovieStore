@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApi.Application.CustomerOperations.CreateCustomer;
 using WebApi.Application.GenreOperations.Commands.CreateGenre;
 using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using WebApi.Application.GenreOperations.Queries.GetGenres;
@@ -40,6 +41,10 @@ namespace WebApi.Common
             CreateMap<Genre, GenreViewModel>();
             CreateMap<Genre, GenreDetailViewModel>();
             CreateMap<CreateGenreModel, Genre>();
+            #endregion
+
+            #region Customer Mappings
+            CreateMap<CreateCustomerModel, Customer>();
             #endregion
         }
     }
